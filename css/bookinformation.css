@@ -1,0 +1,136 @@
+.show-info{
+	position: fixed;
+	left:40%;
+	top: 50%;
+	height: 50px;
+	width: 300px;
+	border: 1px solid #3A3434;
+	color: #fff;
+	display: none;
+	text-align: center;
+	font-size: 1.5em;
+	background-color:rgba(0, 0, 0,0.9);
+
+}
+
+.book{
+	/*border: 1px solid #D1D1D1;*/
+	width:60vw;
+	margin-left: 30vw;
+	height: 90vh;
+
+}
+
+.book-img{
+	width:40%;
+	height: 60%;
+	background-size: 100% 100%;
+	border: 1px solid #D1D1D1;
+	float: left;cursor: pointer;
+}
+img{
+	background-size: 100% 100%;
+}
+.book_name{
+	font-size: 1.5em;
+	color:#8D8B8B;
+	font-weight: 700;
+	padding-left: 2vw;
+}
+.book-information{
+	float: left;
+	margin-left: 3vw;
+}
+.book-information{
+	width:30vw;
+	list-style: none;
+	color:#595858;
+	line-height: 3em;
+	font-size: 0.9em;
+}
+
+.small-info{
+	height: 8vw;
+	/*border: 1px solid #D1D1D1;*/
+	overflow:hidden;
+
+}
+.choose button{
+	margin-left: 5vw;
+	/*width:10vw;*/
+}
+.btn-self{
+	/*width: 10vw;*/
+}
+.history{
+	margin-left: 5vw;
+	border-top: 3px solid #FF2832;
+}
+.one{
+	border-bottom: 1px solid #DBD5D5
+
+}
+.warning{
+	color:#595858;font-size:0.9em;
+}
+@media screen and (max-width: 768px){
+	.head-img{
+		display: none;
+	}
+	.book_name{
+	font-size: 1.2em;
+	
+	
+	padding-left: 0vw;
+}
+	.search{
+		width:100vw;
+	}
+	.tip{
+		width:100vw;
+	}
+	.tip li{
+		width:50%;
+	}
+	.nav-top-book{
+		display: none;
+	}
+	.recommend{
+		width:80vw;
+		display: none;
+	}
+	.book-img{
+		height:30vh;
+		margin-left: -20vw;
+	}
+	.one,.two{
+		width:25vw;
+		float: left;
+	}
+	.choose{
+		clear: both;
+	}
+	.book-information{
+		width:50vw;
+	}
+	.choose{
+		width:100vw;
+		    margin-left: -20%;
+	}
+	.choose button{
+	margin-left: 0vw;
+	/*width:10vw;*/
+}
+.history{
+	margin-top: -35vh
+}
+.warning{
+	display: none;
+}
+.row{
+	    margin-right: 58px;
+}
+.hotimg{
+	width:100%;
+}
+}

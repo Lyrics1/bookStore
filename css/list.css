@@ -1,0 +1,106 @@
+.lists-book{
+	/*border: 1px solid #D7CFCF;*/
+	width:67vw;
+
+	/*height: 50vh;*/
+	overflow: hidden;
+	position: relative;
+	margin-left: 28vw
+
+}
+
+.book-card{
+	margin-top: 3vh;
+	/*border: 1px solid #D7CFCF;*/
+	width:31%;
+	height:32vh;
+	position: relative;
+	float: left;
+	/*clear: both;*/
+}
+.card-img{
+	width:50%;
+	/*border: 1px solid #D7CFCF;*/
+	height: 100%;
+	background-size: 100% 100%;
+	float: left;
+	cursor: pointer;
+
+}
+.card-info{
+	width:50%;
+	
+	height: 100%;
+	float: left;
+	/*cursor: pointer;*/
+}
+.lists-book li{
+	list-style: none;
+	
+	
+	
+	cursor: pointer;
+
+}
+.T li{
+	color: #424242;
+	margin-left: 2vw;
+	line-height: 3em;
+	font-weight: 800;
+	display: inline-block;
+}
+.container-fluid{
+	margin-top:3vh;
+}
+.lists-book label{
+	cursor: pointer;
+}
+.lists-book li:hover{
+	color:red;
+}
+.card-info li:nth-child(1){
+	color:#2E2D2D;
+	font-weight: 800;
+	font-size: 0.95em;
+	
+	margin-bottom: 20%;
+}
+.card-info li:nth-child(2),.card-info li:nth-child(3){
+	color:#2E2D2D;
+	font-size: 0.8em;
+	font-weight: 800;
+	line-height: 2em;
+}
+.card-info li:nth-child(4){
+	    height: 33%;
+    margin-top: 22%;
+	overflow: hidden;
+	color:#2E2D2D;
+	font-size: 0.7em;
+	/*font-weight: 800;*/
+	/*border: 1px solid #D7CFCF;*/
+}
+
+@media screen and (max-width: 768px)and (min-width: 370px){
+	.lists-book{
+		width:80vw;
+		margin-left: 6vw
+	}
+	.book-card{
+		width:50%;
+	}
+	
+}
+
+@media screen and (max-width: 370px){
+	.lists-book{
+		width:80vw;
+		margin-left: 6vw
+	}
+		.book-card{
+		width:100%;
+	}
+	.card-info li:nth-child(4) {
+    height: 39%;
+    margin-top: 7%;}
+}

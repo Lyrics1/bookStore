@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>storCar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/share.css">
+	<link rel="stylesheet" type="text/css" href="css/storCar.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div class="header">
+		<ul class="nav nav-tabs ">
+			<li class="active"><img src="images/l1.png" class="logo"></li>
+			<li><a href="Bookinformation.html">主页</a></li>
+			<li><a href="#">产品</a></a></li>
+			<li><a href="#">关于</a></li>
+			<!-- <div class="stor">njknkj</div> -->
+			<div class="btn-group" id="sign">
+				  <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i>  <label style="color:#fff" class="userName">User</label></a>
+				  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+				    <li class="sign_up" onclick="openRegisterModal();"><a href="#"><i class=" icon-pencil"></i> 注册</a></li>
+				    <li class="sign_in"  onclick="openLoginModal();"><a href="#"><i class="icon-trash"></i> 登录</a></li>
+				    <li class="sign_out"><a href="#"><i class="icon-ban-circle"></i> 退出</a></li>
+				    <li class="divider"></li>
+				  
+				    <li class="maninfo"><a href="#"><i class="i"></i> 个人信息</a></li>
+				    
+				  </ul>
+				</div>
+				
+		</ul>
+	</div>
+
+	<div class="nav-head">
+		<div class="head-img"> 
+			<img src="">
+		</div>
+		<div class="search">
+			<div class="input-group  ">
+				<input type="text" class="form-control YY" list="dbinfo">
+				<datalist id="dbinfo">
+					
+				</datalist>
+				<span class="input-group-addon SS" ><img src="images/lupita.png" class="icon-myself" style="width:1.5vw"></span>
+				
+			</div>
+			<div class="search-show">
+
+					<li><a href="javascript:void(0)">大家都在搜：</a></li>
+					<li><a href="javascript:void(0)">测试与运开发</a></li>
+					<li><a href="javascript:void(0)">测试与运维开发</a></li>
+					<li><a href="javascript:void(0)">测试与维开发</a></li><li><a href="javascript:void(0)">测试开发</a></li><li><a href="javascript:void(0)">测试与</a></li>
+								
+			</div>
+		</div>
+		<div class="tip">
+			<li><span class="glyphicon glyphicon-shopping-cart"></span></span> 购物车</li>
+			<li>我的订单</li>
+		</div>
+	</div>
+	<div class="nav-top-book" >
+			<ul class="book-list">
+				<li><a href="javascript:void(0)">热销排行<span class="glyphicon glyphicon-chevron-down" style="margin-left:2vw"></span></a> </li>
+
+				<li class="i"><a href="javascript:void(0)">文学类</a> </li>
+		 		<li class="i"><a href="javascript:void(0)">生活类</a></li>
+		 		<li class="i"><a href="javascript:void(0)">经济类</a></li>
+		 		<li class="i"><a href="javascript:void(0)">计算机类</a></li>
+		 		<li class="i"><a href="javascript:void(0)">青少读物</a></li>
+		 		<li class="i"><a href="javascript:void(0)">人文社科</a></li>
+			</ul>		
+	</div>
+	<div class="hide-book-list">
+				
+					<li>1. <a href="javascript:void(0)"> 1</a></li>
+					<li>2. <a href="javascript:void(0)"> 1</a></li>
+					<li>3. <a href="javascript:void(0)"> 1</a></li>
+					<li>4. <a href="javascript:void(0)"> 1</a></li>
+					<li>5. <a href="javascript:void(0)"> 1</a></li>
+					<li>6. <a href="javascript:void(0)"> 1</a></li>
+					<li>7. <a href="javascript:void(0)"> 1</a></li>
+					<li>8. <a href="javascript:void(0)"> 1</a></li>
+					<li>9. <a href="javascript:void(0)"> 1</a></li>
+					
+				
+		</div>
+
+
+
+<div class="container">
+ <div class="modal fade login" id="loginModal">
+		      <div class="modal-dialog login animated">
+    		      <div class="modal-content">
+    		         <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">登录</h4>
+                    </div>
+                    <div class="modal-body">  
+                        <div class="box">
+                             <div class="content">
+                                <div class="social">
+                                    <a class="circle github" href="/auth/github">
+                                        <i ><img src="css/QQ (3).png"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                                            <i><img src="css/weixin.png"> </i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                      <i ><img src="css/weibo.png"> </i>
+                                    </a>
+                                </div>
+                                <div class="division">
+                                    <div class="line l"></div>
+                                      <span>or</span>
+                                    <div class="line r"></div>
+                                </div>
+                                <div class="error" style="text-align:center;background:#FBB2B2"></div>
+                                <div class="form loginBox">
+                                    <form   accept-charset="UTF-8">
+                                      <input id="user" class="form-control user" type="text" placeholder="user" name="user"> 
+                                   <!--  <input id="email" class="form-control email" type="text" placeholder="Email" name="email" > -->
+                                    <input id="password" class="form-control password" type="password" placeholder="Password" name="password">
+                                    <input class="btn btn-default btn-login" type="button" value="登录" onclick="loginAjax()">
+
+                                
+                                    </form>
+                                </div>
+                             </div>
+                        </div>
+                           <!-- 注册 -->
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                             <div class="form">
+                                <form >
+                                  <input id="user" class="form-control user" type="text" placeholder="user" name="user"> 
+                                  <input id="password" class="form-control password" type="password" placeholder="Password" name="password">
+                               <!--  <input id="email" class="form-control email" type="text" placeholder="Email" name="email">   -->                           
+                                <input  class="form-control tel" type="text" placeholder="Tel" name="password_confirmation">
+                                <input class="btn btn-default btn-register"  value="注册" name="commit" onclick="loginUpAjax();">
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                            <span>跳转到
+                                 <a href="javascript: showRegisterForm();">注册</a>
+                            ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                             <span>跳转到
+                             <a href="javascript: showLoginForm();">登录</a>？</span>
+                        </div>
+                    </div>        
+    		      </div>
+		      </div>
+		  </div>
+	<div class="list">
+		<li>
+			<input type="checkbox" class="choose-all">全选
+		</li>
+		<li>商品信息</li>
+		<li>单价</li>
+		<li>数量</li>
+		<li>总价</li>
+		<li>操作</li>	
+	</div>
+	
+<div class="store">
+		<div class="choose ">
+			<input type="checkbox" name="">
+		</div>
+		<div class="stor-img">
+			<img src="images/6.jpg" style="width:100px ;height:100px;">
+		</div>
+		<div class="stor-info">
+		<p class="bookn">rrr</p>
+			<label>
+			dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</label>
+		</div>
+		<div class="stor-price">
+			￥<label class="a"> 33.0</label>
+		</div>
+		<div class="stor-count">
+			<div class="input-group  ">
+				<span class="input-group-addon reduce" > - </span>
+				<input type="text" class="form-control count" value="1" >
+				<span class="input-group-addon add" > + </span>
+			</div>
+		</div>
+		<div class="stor-price-all">
+			￥<label class="o">0</label>
+		</div>
+		<div class="else">
+			<button class="btn btn-warning delete">删除</button>
+		</div>
+	</div>
+	
+</div>
+
+
+<div class=" footer team-info" style="margin-top:5vh;">
+			<ul>
+				<li><a href="">团队简介</a> </li>
+				<li><a href="">联系我们</a> </li>
+				<li><a href=""> Follow Us</a></li>
+				<li><a href="">更多推荐</a>  </li>				
+			</ul>
+			<div class="chat">
+				喜欢读书，就等于把生活中寂寞的辰光换成巨大享受的时刻。
+			</div>
+
+			<p>copyright  西安邮电大学</p>
+</div>
+
+<div class="store-end">
+	<div class="choose">
+		<input type="checkbox" name="" class="choose-all">全选
+	</div>
+	<div class="price-all">
+		总价：<label class="ALL">0</label>
+	</div>
+	<div class="none">清除所有商品</div>
+	<div class="submit">
+		 结算 
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+<script src="js/share.js"></script>
+<script type="text/javascript" src="js/storeCar.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+</body>
+</html>

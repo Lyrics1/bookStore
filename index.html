@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1, user-scalable=no">
+<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="css/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/smoothslides.theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/entypo.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	
+	<!-- <link rel="stylesheet" type="text/css" href="css/stylecard.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="Semantic/Semantic-UI-1.0/dist/semantic.min.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="header">
+		<ul class="nav nav-tabs ">
+			<li class="active"><img src="images/l1.png" class="logo"></li>
+			<li><a href="#">主页</a></li>
+			<li><a href="#">产品</a></a></li>
+			<li><a href="#">关于</a></li>
+			<!-- <div class="stor">njknkj</div> -->
+			<div class="btn-group" id="sign">
+				  <a class="btn btn-primary " href="#"><i class="icon-user icon-white"></i> <label style="color:#fff" class="userName">User</label> </a>
+				  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+				    <li class="sign_up" onclick="openRegisterModal();"><a href="#"><i class=" icon-pencil"></i> 注册</a></li>
+				    <li class="sign_in"  onclick="openLoginModal();"><a href="#"><i class="icon-trash"></i> 登录</a></li>
+				    <li class="sign_out"><a href="#"><i class="icon-ban-circle"></i> 退出</a></li>
+				    <li class="divider"></li>
+				  
+				     <li class="stor"><a href="storCar.html"><i class="i"></i> 购物车</a></li>  <li class="maninfo"><a href="#"><i class="i"></i> 个人信息</a></li>
+				    
+				  </ul>
+				</div>
+				
+		</ul>
+	</div>
+	<div class=" flash smoothslides" id="dowebok">
+		    <img src="images/z1.jpg"  >
+		    <img src="images/z2.jpg" >
+		    <img src="images/z3.jpg">
+		    <img src="images/z4.jpg" >
+		   
+	</div>
+	<!-- <i class="icon-search icon-white"></i> -->
+	 <div class="search">
+	 	<ul id="classify">
+	 		<li><a href="javascript:void(0);">文学类</a> </li>
+	 		<li><a href="javascript:void(0);">生活类</a></li>
+	 		<li><a href="javascript:void(0);">经济类</a></li>
+	 		<li><a href="javascript:void(0);">计算机类</a></li>
+	 		<li><a href="javascript:void(0);">青少读物</a></li>
+	 		<li><a href="javascript:void(0);">人文社科</a></li>
+	 	</ul>
+	 		<!-- <select name="" id="classify">
+	 			<option value="">计算机</option>
+	 			<option value="">java</option>
+	 			<option value="">Js</option>
+	 			<option value="">PHP</option>
+	 			<option value="">Ajax</option>
+	 			<option value="">Mysql</option>
+	 		</select> -->
+		    	<div class="input-group ">
+
+				<input type="text" class="form-control form-search YY" list="dbinfo">
+				<datalist id="dbinfo">
+					
+				</datalist>
+				<span class="input-group-addon SS" id="star-search"><img src="images/lupita.png" class="icon-myself"></span>
+			</div>
+	 </div>
+
+	<div class="container">
+		 <div class="modal fade login" id="loginModal">
+		      <div class="modal-dialog login animated">
+    		      <div class="modal-content">
+    		         <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">登录</h4>
+                    </div>
+                    <div class="modal-body">  
+                        <div class="box">
+                             <div class="content">
+                                <div class="social">
+                                    <a class="circle github" href="/auth/github">
+                                        <i ><img src="css/QQ (3).png"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                                            <i><img src="css/weixin.png"> </i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                      <i ><img src="css/weibo.png"> </i>
+                                    </a>
+                                </div>
+                                <div class="division">
+                                    <div class="line l"></div>
+                                      <span>or</span>
+                                    <div class="line r"></div>
+                                </div>
+                                <div class="error" style="text-align:center;background:#FBB2B2"></div>
+                                <div class="form loginBox">
+                                    <form   accept-charset="UTF-8">
+                                      <input id="user" class="form-control user" type="text" placeholder="user" name="user"> 
+                                   <!--  <input id="email" class="form-control email" type="text" placeholder="Email" name="email" > -->
+                                    <input id="password" class="form-control password" type="password" placeholder="Password" name="password">
+                                    <input class="btn btn-default btn-login" type="button" value="登录" onclick="loginAjax()">                               
+                                    </form>
+                                </div>
+                             </div>
+                        </div>
+                           <!-- 注册 -->
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                             <div class="form">
+                                <form >
+                                  <input id="user" class="form-control user" type="text" placeholder="user" name="user"> 
+                                  <input id="password" class="form-control password" type="password" placeholder="Password" name="password">
+                               <!--  <input id="email" class="form-control email" type="text" placeholder="Email" name="email">   -->                           
+                                <input  class="form-control tel" type="text" placeholder="Tel" name="password_confirmation">
+                                <input class="btn btn-default btn-register"  value="注册" name="commit" onclick="loginUpAjax();">
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                            <span>跳转到
+                                 <a href="javascript: showRegisterForm();">注册</a>
+                            ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                             <span>跳转到
+                             <a href="javascript: showLoginForm();">登录</a>？</span>
+                        </div>
+                    </div>        
+    		      </div>
+		      </div>
+		  </div>
+		<div class="show-special">
+			<div class="row">
+			<div class="col-md-12">
+				<div class="card ">
+					 <div class="card-header">
+					  	<li class="temp">Card title</li>
+					  	
+					</div>
+					<p>Some quick example text to build </p>
+					<div class="card-img">
+						<div class="special-img bim">
+							<img src="images/1.gif" class="card-img-li " >
+						</div>
+						<div class="special-img bim">
+							<img src="images/2.gif" class="card-img-li " >
+						</div>
+						<div class="special-img bim">
+							<img src="images/3.gif" class="card-img-li " >
+						</div>
+						<div class="special-img bim">
+							<img src="images/4.gif" class="card-img-li " >
+						</div>
+						
+						
+					</div>
+					<div class="card-block-self">
+						<button class="btn btn-info btn-self">web</button>
+						<button class="btn btn-info btn-self">java</button>
+						<button class="btn btn-info btn-self">web</button><br/><br/>
+						<button class="btn btn-info btn-self">web</button>
+						<button class="btn btn-info btn-self">web</button>
+						<button class="btn btn-info btn-self">web</button><br/><br/>
+						<p style="text-align:center">书房是文人精神的巢穴，生命的禅堂。  </br> 世界上最壮丽的宫殿是藏书最多的图书馆。  </br>年轻时读书就像迎着朝阳走路。  </br>最淡的墨水也胜过最强的记忆。   精神能补物质的不足。</p>
+					 </div>
+
+				</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="show-book">
+		<div  class="show-book-one book" >
+			<div class="row">		
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							<img alt="Card image cap" class="card-img-normal " src="images/5.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/6.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/7.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/8.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-4 col-xs-6" >
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/9.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" >
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/10.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/11.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/12.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+			</div>
+			
+		</div>
+		<div  class="show-book-two book" >
+
+			<div class="row">
+				
+				
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/13.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/14.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/15.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/16.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/17.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/18.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/19.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/20.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+			</div>
+			
+		</div>
+		<div  class="show-book-three book"  >
+
+			<div class="row">
+				
+				
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/21.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/22.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/23.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="paid" >
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/24.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-3 col-sm-4 col-xs-6" >
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/25.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" >
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/26.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="iphone">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/27.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+					<div class="card-book card" >
+						 <div class="card-img bimg"> 
+							 <img alt="Card image cap" class="card-img-normal " src="images/28.gif">
+						 </div>
+						 <div class="card-header">
+						  	<li class="bname">Card title</li>
+						  	
+						</div>
+						 
+						  <ul class="list-group list-group-flush">
+						    <li class="list-group-item binfo">Cras justo </li>
+						   
+						  </ul>
+						  <div class="card-block">
+						    <a href="#" class="card-link card-link-self price">Card link</a>
+						    <a href="#" class="card-link card-link-self autor">Another link</a>
+						  </div>
+					</div>
+				
+				</div>
+			</div>
+			
+		</div>
+
+
+
+		
+		<div id="pre">
+			<img src="images/left.png" class="icon-myself">
+		</div>
+		<div id="next">
+			<img src="images/right.png" class="icon-myself">
+		</div>
+		<div id="tip">
+			没有更多的了！亲
+		</div>
+	</div>
+	<div class="e">
+		<div class="book-list-li">
+			<div class="book-list-one">
+				<ul class="nav nav-tabs nav-self">
+					<li >图书 . 电子书 . 网络文学</li>
+					  <li role="presentation" class="one-move"><a href="#">Home</a></li>
+					  <li role="presentation" class="two-move"><a href="#">Profile</a></li>
+					  <li role="presentation" class="three-move"><a href="#">Messages</a></li>
+					   <li role="presentation" class="four-move"><a href="#">Messages</a></li>
+			</ul> 
+			<div class="book-li-two one">
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					 <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div class="bimg" >
+					                	<a href="javascript:void(0);"><img src="images/29.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0);" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price"> <￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0);"><img src="images/30.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/31.jpg" alt="Member" class="member-image"></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a>
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/32.jpg" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/33.jpg" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/34.jpg" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a>
+					                    	<p class="binfo"> vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/35.jpg" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					               <a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/36.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+					
+			</div>
+			<div class="book-li-two two">
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/37.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a>
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/38.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/39.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                <a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/40.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/41.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/42.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/43.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/44.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+					
+			</div>
+			<div class="book-li-two three">
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/45.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a>
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/46.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/47.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/48.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                <a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a>
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/49.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/50.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/51.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                <a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/52.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a>
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+					
+			</div>
+			<div class="book-li-two four">
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/53.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/54.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/55.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a>
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/56.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+				<div class="row show">
+					<!-- <iframe src="frame.html" style="width:100%;height:80vh"></frame>
+					 -->
+					
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/57.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/58.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="phone">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/59.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                <a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price">￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+					  <div class="col-md-3 col-sm-4 col-xs-6" id="paid">
+						<div class="single-member ">
+					            	<div  class="bimg" >
+					                	<a href="javascript:void(0)"><img src="images/60.gif" alt="Member" class="member-image "></a>
+					               </div>
+					                <div class="member-info">
+					                	<a href="javascript:void(0)" class="bname">dignfdgfgbdfbf</a> 
+					                    	<p class="binfo">vsdjvbdsjhvbdchsbvdshvdhvdvhvcdhvdhvdsvhdfbfdbbf</p>
+					                    	<h4 class="price"> ￥12.00</h4>
+					                </div>
+					               <div class="more">
+					            		<div class="click-more">
+					            		详细信息
+					            		</div>
+					           	  </div>
+					            </div>
+
+
+					 </div>
+				</div>
+					
+			</div>
+
+		</div>
+		<div class="book-special">
+				<span id="hot" class="hott">热销</span>
+				<span id="low" class="lowt">特价</span>
+				<div class="book-special-one" >
+				<ol>
+					<li style="color:red">
+					<label class="bname">没有必要读完整本书</label>
+						<div class="special-info bimg">
+							<img src="images/61.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li style="color:red">
+					<label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/62.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li style="color:red">
+					<label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/63.gif" class="special-info-img ">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li>
+					<label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/64.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/65.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/66.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/67.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/68.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/69.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/70.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+				</ol>
+				</div>
+				<div class="book-special-two">
+				<ol>
+					<li style="color:red">
+					<label class="bname">简书</label>
+						<div class="special-info bimg">
+							<img src="images/71.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li style="color:red">
+					<label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/72.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li style="color:red">
+					<label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/73.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li>
+					<label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/74.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/75.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/76.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/77.gif" class="special-info-img ">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/78.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/79.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+					<li><label class="bname">听见花开</label>
+						<div class="special-info bimg">
+							<img src="images/80.gif" class="special-info-img">
+							<div class="special-info-info binfo">
+							vbdhvbdfhvbdhvbdvbdvhbdbvdhvbdvbdkvdskvdbj
+							</div>
+						</div>
+					</li>
+				</ol>
+				</div>
+		</div>
+	</div>
+
+		<div class=" footer team-info">
+			<ul>
+				<li><a href="">团队简介</a> </li>
+				<li><a href="">联系我们</a> </li>
+				<li><a href=""> Follow Us</a></li>
+				<li><a href="">更多推荐</a>  </li>				
+			</ul>
+			<div class="chat">
+				喜欢读书，就等于把生活中寂寞的辰光换成巨大享受的时刻。
+			</div>
+
+			<p>copyright  西安邮电大学</p>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+
+ <script src="js/bootstrap.min.js"></script>
+<script src="js/smoothslides-2.1.0.min.js"></script>
+
+
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/share.js"></script>
+</body>
+</html>

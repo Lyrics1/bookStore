@@ -1,0 +1,156 @@
+.store {
+	list-style: none;
+	margin-top:3vh;
+}
+.store li{
+	display: inline-block;	
+	width: 12%;
+}
+.store  li:nth-child(2){
+	margin-right: 25%;
+}
+.store-info{
+	border: 1px solid  #D1D1D1;
+	/*height: 100px;*/
+	overflow: hidden;
+	margin-top: 20px;
+	
+}
+.store-info li{
+	list-style: none;
+	display: inline-block;
+
+	/*border: 0.5px solid  #D1D1D1;*/
+}
+.store-info li:nth-child(3){
+	width:30%;
+	word-break: break-all;
+	height: 90px;
+	overflow: hidden;
+	padding-top: 10px;
+
+
+}
+.list li{
+	list-style: none;
+	display: inline-block;
+	width:12%;
+	font-weight: 800;
+	margin-top: 3vh;
+}
+.list li:nth-child(2){
+	margin-right: 25%
+}
+.store{
+	border: 1px solid #E7E5E5;
+	overflow: hidden;
+	padding: 5px;
+}
+.store label,.store-end label{
+	color:red;
+}
+.store div{
+	float: left;
+}
+.stor-img{
+	width:11%;
+	height: 11%;
+	
+}
+.stor-info{
+	width: 25%;
+	word-wrap: break-word;
+	margin-left: 3%;
+}
+.stor-price{
+	width:12%;
+	margin-left: 5%;
+	text-align: center;
+	margin-top: 3%;
+
+}
+.stor-count{
+	width:12%;
+	text-align: center;
+	margin-top: 2%;
+	cursor: pointer;
+	
+}
+.stor-price-all,.else{
+	width: 13%;
+	text-align: center;
+	margin-top: 3%;
+	cursor: pointer;
+}
+.store-end{
+	width: 100%;
+	height: 10%;
+	
+	position: fixed;
+	bottom: 0px;
+	background-color: #E1DEDE;
+
+
+}
+.store-end div{
+	float: left;
+	width:10vw;
+	font-size: 1.2em;
+	font-weight: 500;
+	cursor: pointer;
+}
+.store-end{
+	padding:20px 20% 0 20% 
+}
+.submit{
+	position: absolute;right: 5%;
+	border: 1px solid #A7A7A7;
+	background-color:  #A7A7A7;
+	width:20%;
+	height: 100px;
+	margin-top: -20px;
+	text-align:center;
+	padding-top:20px;
+	color: #FFFFFF;
+	font-size: 2em;
+	font-weight: 800;
+}
+input{
+	text-align: center;
+}
+.not{
+	width:100%;
+	height: 45vh;
+	padding:20vh 20vw 0 20vw;
+	font-size: 2em;
+
+
+}
+
+@media screen and (max-width: 768px){
+	.stor-price{
+		clear: both;
+	}
+	.list li:nth-child(3),.list li:nth-child(4),.list li:nth-child(5),.list li:nth-child(6){
+		display: none;
+	}
+	.list li:nth-child(2){
+		width:30%;
+		margin-left: 30%
+	}
+	.stor-info{
+	width: 60%;
+	word-wrap: break-word;
+	margin-left: 20%;
+}
+.stor-count,.stor-price,.else,.stor-price-all{
+	width:23%;
+}
+.store-end{
+	padding: 20px 0px 0px 5%;
+}
+.store-end div{
+	width:20%;
+}
+
+}
